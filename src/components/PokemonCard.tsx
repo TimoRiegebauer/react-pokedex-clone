@@ -40,7 +40,7 @@ const PokemonCard = ({
         </div>
       </a>
       <p className="ml-2 font-semibold text-gray-400">Nr. {pokemon.id.toString().padStart(4, '0')}</p>
-      <p className="ml-2 mt-2 font-semibold text-gray-700 text-[18px]">{firstUpperCase(pokemon.name)}</p>
+      <p className="ml-2 mt-2 font-semibold text-white text-[18px]">{firstUpperCase(pokemon.name)}</p>
       <div className="grid grid-cols-2 gap-2 p-2">
         {
           pokemon.types.map((type: any) => (
