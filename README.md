@@ -1,13 +1,13 @@
-# React Template
+# Pokedex
 
-This is a react project template with tailwindcss, react router and redux
+This is a pokedex created with React.js and TailwindCSS
 
 ## Usage
 
 ```bash
-git clone https://gitlab.lizard-studios.at/triegebauer/react-template
+git clone https://gitlab.lizard-studios.at/triegebauer/react-pokedex
 
-cd react-template
+cd react-pokedex
 
 npm install
 

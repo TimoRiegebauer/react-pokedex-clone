@@ -1,14 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
-import CountPage from "./pages/CountPage";
 import { Provider } from "react-redux";
 import { RouterProvider } from "react-router-dom";
 import store from "./redux/store";
+import HomePage from "./pages/HomePage";
+import PokemonPage from "./pages/PokemonPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <CountPage />
-  }
+    element: <HomePage />
+  },
+  {
+    path: "/pokemon",
+    element: <PokemonPage />
+  },
 ]);
 
 const App = () => {
