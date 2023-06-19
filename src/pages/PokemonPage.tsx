@@ -20,7 +20,7 @@ const PokemonPage = () => {
   }
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-gray-900 to-gray-700 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-8 gap-8">
+    <div className="w-full min-h-screen bg-gray-900 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-8 gap-8">
       {
         pokemon.map((pkm, index) => (<PokemonCard key={index} pokemon={pkm} />))
       }

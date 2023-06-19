@@ -33,24 +33,24 @@ const PokemonCard = ({
   pokemon: any;
 }) => {
   return (
-    <div className="w-full flex flex-col">
-      <a href={`https://www.pokemon.com/us/pokedex/${pokemon.name}`}>
-        <div className={`rounded-md ${getTypeColor(pokemon.types[0].type.name)}`}>
-          <img className="w-full" src={pokemon.sprites.front_default} />
+    <a href={`https://www.pokemon.com/us/pokedex/${pokemon.name}`} target="_blank">
+      <div className="w-full flex flex-col border-[1px] hover:bg-gray-800 duration-300 border-gray-800 rounded-lg p-8 cursor-pointer">
+        <div className="rounded-md">
+          <img className="w-full" src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.id.toString().padStart(3, '0')}.png`} />
         </div>
-      </a>
-      <p className="ml-2 font-semibold text-gray-400">Nr. {pokemon.id.toString().padStart(4, '0')}</p>
-      <p className="ml-2 mt-2 font-semibold text-white text-[18px]">{firstUpperCase(pokemon.name)}</p>
-      <div className="grid grid-cols-2 gap-2 p-2">
-        {
-          pokemon.types.map((type: any) => (
-            <div className={`rounded-md flex justify-center items-center ${getTypeColor(type.type.name)}`}>
-              <p className="text-white">{firstUpperCase(type.type.name)}</p>
-            </div>
-          ))
-        }
+        <p className="ml-2 font-semibold text-gray-400">Nr. {pokemon.id.toString().padStart(4, '0')}</p>
+        <p className="ml-2 mt-2 font-semibold text-white text-[18px]">{firstUpperCase(pokemon.name)}</p>
+        <div className="grid grid-cols-2 gap-2 p-2">
+          {
+            pokemon.types.map((type: any) => (
+              <div className={`rounded-md flex justify-center items-center ${getTypeColor(type.type.name)}`}>
+                <p className="text-white">{firstUpperCase(type.type.name)}</p>
+              </div>
+            ))
+          }
+        </div>
       </div>
-    </div>
+    </a>
   );
 }
 
