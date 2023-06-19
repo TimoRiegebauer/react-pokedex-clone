@@ -35,7 +35,7 @@ const PokemonCard = ({
   return (
     <div className="w-full flex flex-col">
       <a href={`https://www.pokemon.com/us/pokedex/${pokemon.name}`}>
-        <div className={`bg-gray-100 rounded-md ${getTypeColor(pokemon.types[0].type.name)}`}>
+        <div className={`rounded-md ${getTypeColor(pokemon.types[0].type.name)}`}>
           <img className="w-full" src={pokemon.sprites.front_default} />
         </div>
       </a>
